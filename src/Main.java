@@ -19,36 +19,45 @@ public class Main {
                 {7, 1, 8, 0}
         };
 
-        System.out.println(Determinant.LaplaceExpansionColumns(matrix1));
-        System.out.println(Determinant.LaplaceExpansionColumns(matrix2));
-        System.out.println(Determinant.LaplaceExpansionColumns(matrix3));
 
-        System.out.println(Determinant.LaplaceExpansionRows(matrix1));
-        System.out.println(Determinant.LaplaceExpansionRows(matrix2));
-        System.out.println(Determinant.LaplaceExpansionRows(matrix3));
+        long start = System.currentTimeMillis();
+//        System.out.println(Arrays.deepToString(Permutations.ProducePermutations(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})));
+        Permutations.HeapPermutation(new int[]{1, 2, 3}, 3, 3);
+//        Permutations.ProducePermutations2(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 0);
+        long finish = System.currentTimeMillis();
 
-        System.out.println(Arrays.deepToString(Permutations.ProducePermutations(new int[]{1, 2, 3})));
-        System.out.println(Arrays.deepToString(Permutations.ProducePermutations(new int[]{1, 2, 3, 4})));
+        System.out.println(finish - start);
 
-        System.out.println(Permutations.isPositivePermutation(new int[]{1, 2, 3}));
-        System.out.println(Permutations.isPositivePermutation(new int[]{1, 3, 2}));
-        System.out.println(Permutations.isPositivePermutation(new int[]{2, 3, 1}));
+//        System.out.println(Determinant.LaplaceExpansionColumns(matrix1));
+//        System.out.println(Determinant.LaplaceExpansionColumns(matrix2));
+//        System.out.println(Determinant.LaplaceExpansionColumns(matrix3));
+//
+//        System.out.println(Determinant.LaplaceExpansionRows(matrix1));
+//        System.out.println(Determinant.LaplaceExpansionRows(matrix2));
+//        System.out.println(Determinant.LaplaceExpansionRows(matrix3));
+//
+//        System.out.println(Arrays.deepToString(Permutations.ProducePermutations(new int[]{1, 2, 3})));
+//        System.out.println(Arrays.deepToString(Permutations.ProducePermutations(new int[]{1, 2, 3, 4})));
+//
+//        System.out.println(Permutations.isPositivePermutation(new int[]{1, 2, 3}));
+//        System.out.println(Permutations.isPositivePermutation(new int[]{1, 3, 2}));
+//        System.out.println(Permutations.isPositivePermutation(new int[]{2, 3, 1}));
+//
+//        System.out.println(Determinant.sumOfPermutations(new int[][]{{2, 2}, {1, 4}}));
+//        System.out.println(Determinant.sumOfPermutations(new int[][]{{1, 0, 3}, {3, 2, 5}, {6, 1, 2}}));
 
-        System.out.println(Determinant.sumOfPermutations(new int[][]{{2, 2}, {1, 4}}));
-        System.out.println(Determinant.sumOfPermutations(new int[][]{{1, 0, 3}, {3, 2, 5}, {6, 1, 2}}));
-
-        int[] row1 = new int[]{1, 2, 3, 4, 5};
-        int[] row2 = new int[]{6, 7, 8, 9, 5};
-
-        RowColumnElementary.RowExchange(row1, row2);
-
-        System.out.println(Arrays.toString(row1));
-        System.out.println(Arrays.toString(row2));
-
-        row2 = RowColumnElementary.RowMultiplication(row2, 2);
-        System.out.println(Arrays.toString(row2));
-
-        int[] row3 = RowColumnElementary.RowAddition(RowColumnElementary.RowMultiplication(row1, 2), row2);
-        System.out.println(Arrays.toString(row3));
+//        int[] row1 = new int[]{1, 2, 3, 4, 5};
+//        int[] row2 = new int[]{6, 7, 8, 9, 5};
+//
+//        RowColumnElementary.RowExchange(row1, row2);
+//
+//        System.out.println(Arrays.toString(row1));
+//        System.out.println(Arrays.toString(row2));
+//
+//        row2 = RowColumnElementary.RowMultiplication(row2, 2);
+//        System.out.println(Arrays.toString(row2));
+//
+//        int[] row3 = RowColumnElementary.RowAddition(RowColumnElementary.RowMultiplication(row1, 2), row2);
+//        System.out.println(Arrays.toString(row3));
     }
 }
